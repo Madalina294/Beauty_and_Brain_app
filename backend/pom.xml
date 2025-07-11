@@ -17,6 +17,11 @@
     <packaging>pom</packaging>
     <modules>
         <module>beauty_domain</module>
+        <module>beauty_repository</module>
+        <module>beauty_service</module>
+        <module>beauty_controller</module>
+        <module>beauty_security</module>
+        <module>beauty_repository</module>
     </modules>
 
     <properties>
