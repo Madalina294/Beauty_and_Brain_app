@@ -1,9 +1,10 @@
-package beauty.app.service;
+package net.java.backend.beauty_service;
 
 import java.util.List;
 
-import beauty.app.domain.User;
-import beauty.app.repository.UserJPARepository;
+
+import net.java.backend.beauty_domain.User;
+import net.java.backend.beauty_repository.UserJPARepository;
 import org.springframework.stereotype.Service;
 
 
