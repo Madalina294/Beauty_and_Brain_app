@@ -20,12 +20,14 @@ public class RoutineProduct {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "routine_id")
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "routine_id", nullable = false, 
+    foreignKey = @ForeignKey(name = "fk_routineproduct_routine", foreignKeyDefinition = "FOREIGN KEY (routine_id) REFERENCES routines(id) ON DELETE CASCADE"))
     private Routine routine;
 
-    @ManyToOne
-    @JoinColumn(name = "product_id")
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "product_id", nullable = false, 
+    foreignKey = @ForeignKey(name = "fk_routineproduct_product", foreignKeyDefinition = "FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE"))
     private Product product;
 
     private Integer stepOrder; // Step 1, Step 2, etc.

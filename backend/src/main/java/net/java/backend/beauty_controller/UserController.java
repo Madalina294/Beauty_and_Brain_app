@@ -33,5 +33,15 @@ public class UserController {
     public UserDto saveUser(@RequestBody User user) {
         return userService.saveUser(UserMapper.mapToUserDto(user));
     }
+
+    @PutMapping("/update/{id}")
+    public UserDto updateUser(@PathVariable("id") Long UserId, @RequestBody User user) {
+        return userService.updateUser(UserId, UserMapper.mapToUserDto(user));
+    }
+    @DeleteMapping("/delete/{id}")
+    public void deleteUser(@PathVariable("id") Long UserId) {
+        userService.deleteUser(UserId);
+    }
+
 } 
 
